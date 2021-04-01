@@ -1,0 +1,53 @@
+.modal-popup {
+  display: flex;
+  justify-content: space-between;
+  width: 320px;
+  height: 568px;
+  background-color: $body-color;
+  box-shadow: 0 4px 30px rgba($text-color, 0.1);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-left: -160px;
+  margin-top: -284px;
+
+  &--disabled {
+    display: none;
+  }
+}
+
+.modal-popup__picture {
+  display: none;
+}
+
+.modal-popup__title {
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 43px;
+  text-align: center;
+  color: $link-color;
+}
+
+.modal-popup__closed {
+  justify-self: end;
+  @include button-closed;
+}
+
+@media ($tablet-widths) {
+  .modal-popup {
+    background-color: $modal-color;
+    width: 728px;
+    height: 444px;
+    margin-left: -364px;
+    margin-top: -222px;
+  }
+
+  .modal-popups__picture {
+    display: block;
+  }
+
+  .modal-popup__form-list {
+    flex-direction: column;
+    align-items: center;
+  }
+}

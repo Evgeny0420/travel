@@ -1,0 +1,65 @@
+.about-tour {
+  background-image: url(../img/photo1-mobile.jpg);
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: cover;
+  position: relative;
+  height: 100%;
+}
+
+.about-tour__title-wrapper {
+  min-height: 235px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 294px;
+  box-sizing: border-box;
+  padding: 16px;
+}
+
+.about-tour__title {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 36px;
+  text-align: center;
+  color: $body-color;
+}
+
+@media ($tablet-widths) {
+  .about-tour {
+    background-image: url(../img/photo1-tablet.jpg);
+    width: 100%;
+    margin-bottom: 37px;
+  }
+
+  .about-tour__title-wrapper {
+    min-height: 120px;
+    padding: 0 16px;
+  }
+
+  .about-tour__title {
+    font-size: 30px;
+    line-height: 46px;
+    margin: 45px 0 0;
+  }
+}
+
+@media ($desktop-widths) {
+  .about-tour {
+    background-image: url(../img/photo1-desktop.jpg);
+    width: 100%;
+    height: 860px;
+    margin-bottom: 156px;
+  }
+
+  .about-tour__title {
+    font-size: 55px;
+    line-height: 80px;
+    width: 415px;
+    text-align: start;
+    margin-top: 186px;
+    margin-left: 633px;
+    letter-spacing: -1.245px;
+  }
+}

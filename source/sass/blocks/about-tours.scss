@@ -1,0 +1,14 @@
+.about-tours__slider-points {
+  box-sizing: border-box;
+  padding: 0 15px;
+}
+
+@media ($desktop-widths) {
+  .about-tours {
+    margin-bottom: 166px;
+  }
+
+  .about-tours__slider-points {
+    padding: 0;
+  }
+}

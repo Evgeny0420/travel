@@ -1,0 +1,12 @@
+.ending__title {
+  @include footer__item-title;
+}
+
+.ending__about {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+  color: rgba($text-color, 0.5);
+  max-width: 708px;
+}

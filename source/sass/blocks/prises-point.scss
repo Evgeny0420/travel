@@ -1,0 +1,177 @@
+.prises-point {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid rgba(44, 46, 63, 0.3);
+  box-sizing: border-box;
+  border-radius: 6px;
+  width: 288px;
+  height: 629px;
+  padding: 0 15px 0;
+  margin: 0 0 30px 0;
+
+  &:first-child {
+    height: 614px;
+  }
+
+  &:hover {
+    border-color: $decorate-color;
+    border-width: 3px;
+
+    .prises-point__title,
+    .prises-point__prise {
+      color: $decorate-color;
+    }
+
+    .prises-point__services-item {
+      &::after,
+      &::before {
+        background-color: $text-color;
+      }
+    }
+  }
+}
+
+.prises-point__title-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.prises-point__title {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 38px;
+  text-align: center;
+  letter-spacing: -1.27273px;
+  color: rgba($text-color, 0.7);
+  margin: 26px 0 0 0;
+}
+
+.prises-point__prise {
+  font-weight: bold;
+  font-size: 25px;
+  line-height: 34px;
+  text-align: center;
+  color: rgba($text-color, 0.7);
+  margin: 6px 0 0;
+}
+
+.prises-point__services {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.prises-point__services-title {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: $text-other-color;
+  box-sizing: border-box;
+  padding: 13px 15px 8px;
+  margin: 0;
+  border-bottom: 1px solid rgba(44, 46, 63, 0.3);
+}
+
+.prises-point__services-list {
+  padding: 0 0 0 35px;
+  margin: 15px 0 0 0;
+}
+
+.prises-point__services-item {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 32px;
+  color: $text-other-color;
+  list-style-type: none;
+  position: relative;
+  margin: 7px 0 10px 0;
+
+  &::before {
+    content: "";
+    width: 14.5px;
+    height: 2px;
+    border-radius: 1px;
+    background-color: $decorate-color;
+    position: absolute;
+    top: 15px;
+    left: -28px;
+    transform: rotate(127.48deg);
+  }
+
+  &::after {
+    content: "";
+    width: 7.6px;
+    height: 2px;
+    border-radius: 1px;
+    background-color: $decorate-color;
+    position: absolute;
+    top: 18px;
+    left: -31.5px;
+    transform: rotate(46.48deg);
+  }
+}
+
+.prises-point__button {
+  border: none;
+  @include link;
+  margin: 20px 0 0 0;
+}
+
+@media ($tablet-widths) {
+  .prises-point {
+    &:first-child {
+      height: 629px;
+    }
+  }
+
+  .prises-point__button {
+    width: 288px;
+  }
+}
+
+@media ($desktop-widths) {
+  .prises-point {
+    width: 370px;
+    height: 672px;
+    padding: 30px;
+
+    &:first-child {
+      height: 672px;
+    }
+  }
+
+  .prises-point__title-wrapper {
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-top: 6px;
+    margin-bottom: 40px;
+  }
+
+  .prises-point__title {
+    font-size: 28px;
+    line-height: 38px;
+    text-align: start;
+    margin: 0 39px 0 0;
+  }
+
+  .prises-point__prise {
+    margin: 0;
+    text-align: end;
+  }
+
+  .prises-point__services-title {
+    text-align: start;
+    padding: 0 0 27px 0;
+    margin: 0 0 8px 0;
+    width: 289px;
+  }
+
+  .prises-point__button {
+    width: 310px;
+  }
+}

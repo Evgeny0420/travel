@@ -1,0 +1,108 @@
+.tours-list {
+  padding: 0 16px;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 622px;
+}
+
+.tours-list__item {
+  list-style-type: none;
+  min-width: 288px;
+  min-height: 425px;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  position: relative;
+  width: calc(1/2*100% - (1 - 1/2)*31px);
+  margin: 0 0 31px;
+
+  &:hover {
+    .tours-list__link-wrapper {
+      display: block;
+    }
+  }
+}
+
+.tours-list__name-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 215px;
+  height: 61.76px;
+  background-color: $body-color;
+  position: absolute;
+  bottom: 3px;
+}
+
+.tours-list__name {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  text-align: center;
+  letter-spacing: -0.415px;
+  color: $text-other-color;
+}
+
+.tours-list__link-wrapper {
+  width: 98%;
+  height: 100%;
+  background-color: rgba($text-color, 0.6);
+  position: absolute;
+  display: none;
+}
+
+.tours-list__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: $body-color;
+  text-decoration: none;
+  width: 266px;
+  height: 77px;
+  border: 1px solid rgba($body-color, 0.7);
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+@media ($tablet-widths) {
+  .tours-list {
+    margin: 0 0 68px 0;
+  }
+
+  .tours-list__item {
+    margin: 0 0 21px;
+  }
+}
+
+@media ($desktop-widths) {
+  .tours-list {
+    padding: 0;
+    max-width: 1170px;
+    margin-bottom: 0;
+  }
+
+  .tours-list__item {
+    width: calc(1/3*100% - (1 - 1/3)*60px);
+    margin: 0 0 93px;
+  }
+}
+
+@media ($desktopx2-widths) {
+  .tours-list__photo-img {
+    width: 350px;
+    height: 430px;
+  }
+}

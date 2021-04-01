@@ -1,0 +1,40 @@
+.slider__list {
+  margin: 5px 0 0 15px;
+  padding: 0 0 15px 0;
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+  border-bottom: 1px solid rgba($text-other-color, 0.3);
+}
+.slider__item {
+  list-style-type: none;
+  margin-right: 100px;
+}
+
+.slider__button {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: -0.415px;
+  color: rgba($text-other-color, 0.3);
+}
+
+@media ($tablet-widths) {
+  .slider__list {
+    margin: 5px 0 9px 37px;
+  }
+}
+
+@media ($desktop-widths) {
+  .slider__list {
+    margin: 5px 268px 9px 0;
+    justify-content: flex-start;
+  }
+}
